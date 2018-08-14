@@ -850,9 +850,14 @@ h1, h2 {
       width: 4px;
       height: 24px;
       background: green; }
-    .play .fl audio {
-      margin-top: 5px; }
 
+.play .fl audio {
+  margin-top: 5px; }
+@media screen and (max-width: 300px) {
+        .play .fl audio {
+            opacity: 0;
+        }
+    }
 .par4 {
   width: 700px;
   height: 340px;
