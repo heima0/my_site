@@ -1,0 +1,372 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="author" content="mr.han">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
+    <link rel="apple-touch-icon-precomposed" href="./images/2.jpg">
+    <link href="./images/favicon.ico" rel="shortcut icon">
+
+    <title>mr.han空间站</title>
+    <meta name="keywords" content="韩,mr.han,空间站,个人空间,个人网站">
+    <meta name="description" content="个人网站">
+    
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <script src="js/main.min.js"></script>
+
+  </head>
+<body>
+
+  <!-- 加载 -->
+  <div class="loader-holder">
+    <div class="loader">
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+      <div class="side"></div>
+    </div>
+  </div>
+
+  <div id="site">
+
+    <!-- 天气 -->
+    <marquee direction="left" behavior="alternate" scrollamount="5" scrolldelay="0" loop="-1" width="" height="" bgcolor="" hspace="0" vspace="10">
+      <div id="today_container">
+        <div class="icon">
+            <a href="http://en.weather.com.cn/"><img alt="Weather Today" title="Weather Today" width="81" height="60"></a>
+        </div>
+        <div>
+            <div class="main_info">
+              <span class="infos"></span><br><span class="infos"></span>
+            </div>
+            <div class="more_info">
+              <span class="infos"></span>
+            </div>
+        </div>
+      </div>
+    </marquee>
+
+    <!-- 个人名片 -->
+    <div id="my_card" class="my_card">
+      <div class="txt">
+         <div class="fl">
+           <img src="./images/2.jpg" width="110" height="110" title="This is my cat and its name is Batie">
+           <p>H5&C3&JS& VUE&JQ& JQ_MOBILE...</p>
+         </div>
+         <div class="fr">
+           <p>As a IT Engineer,I have 3 years front-end Web develop experience.I can complete the large-scale front-end web development independently .Also familiar with the Node language,proficient in css+div,html and javascript as well as photoshop,dreamweaver,fireworks and Echarts,etc.</p>
+           <span class="email"><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=opOblJKblpaQm5Xi09OMwc3P"></a></span><span class="qq"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1960944297&amp;site=qq&amp;menu=yes"></a></span><span class="blog"><a target="_blank" href="http://pop3.mrhanjinbao.com"></a></span>
+         </div>
+      </div>
+    </div>
+
+    <!-- 导航 -->
+    <div class="head-nav">
+      <ul id="nav" class="nav">
+          <li class="nLi">
+              <h3><a href="http://www.mrhanjinbao.com">我的主页</a>
+                <span></span>
+              </h3>
+          </li> 
+          <li class="nLi">
+                  <h3><a href="javascript:;" target="_blank">首都旅游</a>
+                    <span></span>
+                  </h3>
+                  <ul class="sub">
+                      <li><a target="_blank" href="/map.html">景点地图</a></li>
+                  </ul>
+          </li>
+          <li class="nLi">
+                      <h3><a href="javascript:;" target="_blank">我的相册</a>
+                        <span></span>
+                      </h3>
+                      <ul class="sub">
+                          
+                      </ul>
+          </li>
+          <li class="nLi">
+                  <h3><a href="http://pop3.mrhanjinbao.com" target="_blank">我的博客</a>
+                    <span></span>
+                  </h3>
+          </li>
+          <li class="nLi nLi0">
+                  <h3><a href="javascript:;" target="_blank">我的练习</a>
+                    <span></span>
+                  </h3>
+                  <ul class="sub">
+                      
+                  </ul>
+          </li>
+      </ul>
+    </div>
+    
+    <!-- 轮播 -->
+    <div id="wrap">
+      <div id="curtain">
+        <div id="container" tabindex="-1">
+          <div id="mainVisual">
+            <div class="parentControl">
+              <button type="button" class="go-button go-ir" data-type="prev"></button>
+              <button type="button" class="go-button go-ir" data-type="next"></button>
+            </div>
+            <div class="grap go-layout">
+              <div class="obj">
+                <div class="control">
+                  <span>
+                    <button type="button" class="go-button go-ir">1</button>
+                    <button type="button" class="go-button go-ir">2</button>
+                    <button type="button" class="go-button go-ir">3</button>
+                    <button type="button" class="go-button go-ir">4</button>
+                    <button type="button" class="go-button go-ir">5</button>
+                  </span>
+                </div>
+                <div class="item" v-for="item in banners">
+                  <a href="javascript:;" v-html="item.src"></a>
+                  <div class="objChildren">
+                    <div class="control">
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="l"><img src="" alt=""></div>
+                  <div class="r"><img src="" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧电梯 -->
+    <div class="rightNav fr font-effect-fragile">
+      <a id="scrollUp" href="#my_card"><em>Top</em>回到顶部</a>
+      <a class="new" href="#wrap"><em>0</em>战地儿童</a>
+      <a href="#poet"><em>1</em>诗人</a>
+      <a class="new" href="#cat"><em>2</em>猫与人</a>
+      <a href="#book"><em>3</em>读书/日历</a>
+      <a class="new" href="#music"><em>4</em>音乐/美图/头条</a>
+      <a href="#m_wnews"><em>5</em>微新闻</a>
+      <a class="new" href="#php_js"><em>T1</em>PHP社区</a>
+      <a href="#tool"><em>T2</em>前端社区</a>
+      <!-- <a class="new" id="viewNew"><em>new</em>只显示New</a> -->
+    </div>
+
+    <!-- 主内容 -->
+    <div class="content">
+      <div id="poet" class="poet">
+        <h2>诗人</h2>
+        <ul>
+          <li v-for="(item,index) in poets" :key="index">
+            <div>
+              <h2><a :href="item.href" target="_blank">{{item.tit}}</a></h2>
+              <span>{{item.author}}</span>
+              <p class="font-effect-fragile">{{item.txt}}</p>
+            </div>
+          </li>
+        </ul>
+        <p></p>
+      </div>
+
+      <div id="cat" class="cat">
+        <p class="tb-lr">私のガールフレンドと私の猫</p>
+        <p class="tb-lr tb-lr1">私の猫&nbsp;&nbsp;&nbsp;&nbsp;の名前は覇天と言います</p>
+        <div class="foucebox" style="margin:0 auto">
+            <div class="bd">
+                <ul>
+                    <li v-for="(item,index) in cats" :key="index">
+                        <a :href="item.href" v-html="item.src">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd">
+                <div class="hoverBg"></div>
+                <ul>
+                    <li v-for="(item,index) in cats" :key="index">
+                        <a href="javascript:;" v-html="item.src">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      <div id="book" class="news_time">
+        <div class="news fl">
+          <h2>丑要多读书</h2>
+          <span><img src="./images/book.jpg"></span>
+          
+          <ul>
+            <li v-for="(New,index) in books" :key="index">
+              <b :class="[index == 1||index == 2 ? 'exp1': '', index == 0? 'exp2': '']">{{index+1}}</b>
+              <a :href="'./article.html?id=' + New.id" target="_blank">{{New.title}}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="calendar" class="calendar fr">
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="music" class="play">
+        <div class="fl">
+          <h4>music</h4>
+          <div id="music" class="player">
+            <img src="./images/music.jpg" width="310" height="195" alt="mr.han">
+            <audio id="myAudio" autoplay loop controls style="height: 50px;">
+              <source src="http://topic.visitbeijing.com.cn/site/2018/S/wudao/source/music.mp3" type="audio/mpeg">
+              您的浏览器不支持 audio 与元素。
+            </audio>
+          </div>
+        </div>
+
+        <div class="fr">
+          <!-- 第四部分 -->
+          <div class="par4">
+            <div class="hd">
+                <ul>
+                    <li>今日头条</li>
+                    <li>美图看看</li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul class="ul1"> 
+                    <li v-for="(item,index) in hotNews" :key="index">
+                      <i>「{{item.category}}」</i><span>{{item.title}}</span>
+                    </li>
+                </ul>
+                <ul class="ul2"> 
+                    <li v-for="(item,index) in meiTus" :key="index">
+                      <a :href="item.url" target="_blank"><img :src="item.url" title="美图"></a>
+                    </li>
+                    <li class="pages">
+                      <div class="page">
+                        <p></p>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="m_wnews" class="m_wnews">
+        <strong>微新闻</strong>
+        <div class="tempWrap">
+          <div id="miniNewsRegion">
+            <div class="clone">
+              华纳或投拍喜剧新片《Get Hard》，计划由<a href="#">威尔·法瑞尔</a>和<a href="#">Kevin Hart</a>主演，前者的角色是一个富有的投行经理，后者是一个聪明的街头小人物。...
+            </div>
+            <div>
+              年度喜剧<a href="#">《人再囧途之泰囧》</a>将于12月12日公映，今日再曝终极奇幻旅程特辑《少年囧宝的泰国漂流》，<a href="#">王宝强</a>、<a href="#">徐峥</a>搭档奇妙旅程。（<a href="#">详情</a>）...        
+            </div>
+            <div>
+              墨西哥导演<a href="#">亚利桑德罗·冈萨雷斯·伊纳里多</a>（<a href="#">《通天塔》</a>、<a href="#">《美错》</a>）将拍新片《鸟人》（Birdman），计划明年三月开机。<a href="#">详细</a>...
+            </div>
+            <div>
+              <p> 趁昆汀版<a href="#">《被解放的迪亚戈》</a>即将上映之际，Rialto Pictures宣布将在12月21日起重映1966年经典版的<a href="#">《迪亚戈》</a>。</p> ...
+            </div>
+            <div>
+              狮门影业出品的<a href="#">《德州电锯杀人狂3D》</a>日前再发新剧照，媚眼美女开Party，享受“最后的晚餐”<a href="#">（点击大图）</a>...
+            </div>
+            <div>
+              <a href="#">《无敌破坏王》</a>导演向外媒透露，经典角色“超级玛丽”望出现在续集中，但迪士尼官方尚未确认续集计划<a href="#">（查看详情）</a>...
+            </div>
+            <div>
+              <a href="#">李·佩斯</a>（<a href="#">《霍比特人》</a>、<a href="#">《灵指神探》</a>）确认加盟漫威超级英雄电影<a href="#">《银河护卫队》</a>，将出演护卫队领袖人物星爵（Star-Lord）。详细...
+            </div>
+            <div>
+              <p> 迪士尼或将拍<a href="#">《爱丽丝梦游仙境》</a>续集，外媒报道称，前作编剧<a href="#">琳达·沃尔夫顿</a>已经在为续集撰写剧本。</p> ...
+            </div>
+            <div>
+              迪士尼在为其<a href="#">《布偶大电影》</a>续集物色演员，<a href="#">《摩登家庭》</a>男配角<a href="#">泰·布利尔</a>率先加盟，续集将继续由<a href="#">詹姆斯·波宾</a>执导，计划2013年12月20日上映。...
+            </div>
+            <div>
+              <a href="#">乔治·克鲁尼</a>自编自导自演的商业大片<a href="#">《古迹卫士》</a>定于2013年12月12日上映，<a href="#">马特·达蒙</a>、<a href="#">比尔·默瑞</a>、<a href="#">凯特·布兰切特</a>等加盟出演。 ...
+            </div>
+            <div>
+              华纳或投拍喜剧新片《Get Hard》，计划由<a href="#">威尔·法瑞尔</a>和<a href="#">Kevin Hart</a>主演，前者的角色是一个富有的投行经理，后者是一个聪明的街头小人物。...
+            </div>
+            <div class="clone">
+              年度喜剧<a href="#">《人再囧途之泰囧》</a>将于12月12日公映，今日再曝终极奇幻旅程特辑《少年囧宝的泰国漂流》，<a href="#">王宝强</a>、<a href="#">徐峥</a>搭档奇妙旅程。（<a href="#">详情</a>）...
+            </div>
+          </div>
+        </div>
+        <div class="m_wmore">
+          <a href="#">更多微新闻&gt;&gt;</a>
+        </div>
+        <div class="pagesize">
+          <a href="javascript:void(0)" class="prev">上一条</a>
+          <a href="javascript:void(0)" class="next">下一条</a>
+        </div>
+      </div>
+
+      <div id="php_js" class="floor5">
+        <h2>PHP社区</h2>
+        <div class="wrapper">
+            <div class="tool-text fl">
+                <div class="tool-text01">工欲善其事，必先利其器</div>
+                <div class="tool-text02">Web工具资源精选，让你的工作得心应手，工作效率更高效。</div>
+                <img src="" style="background: yellow;">
+                <div class="v-btn"><a href="http://tool.phpchina.com/index.php?r=tool/index" title="B2B2C多用户商城系统" target="_blank">点击进入</a></div>
+            </div>
+            <div class="tool-info fr">
+                <ul>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=1" target="_blank"><img data-original="./images/p1.png"><span>PHP工具</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=2" target="_blank"><img data-original="./images/p2.png"><span>jQuery工具</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=3" target="_blank"><img data-original="./images/p3.png"><span>HTML5工具</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=4" target="_blank"><img data-original="./images/p4.png"><span>Linux组件</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=5" target="_blank"><img data-original="./images/p5.png"><span>JavaScript工具</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=6" target="_blank"><img data-original="./images/p6.png"><span>开发工具</span></a></li>
+                    <li><a href="http://tool.phpchina.com/index.php?r=tool/index&amp;tool_cat=7" target="_blank"><img data-original="./images/p7.png"><span>服务器工具</span></a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      <div id="tool" class="container-tool clearfix">
+        <h2>前端社区</h2>
+        <ul class="clearfix">
+            <li><a href="http://www.css88.com/book/css/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/css3-logo.png" alt=""> CSS参考手册<span style="font-size:12px">(包含css3)</span></a>
+            </li>
+            <li><a href="http://www.css88.com/jqapi-1.9/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/jquery-logo.png" alt=""> jQuery API中文文档</a> / <a href="http://www.css88.com/jqueryapi" target="_blank">更新说明</a></li>
+            <li><a href="http://www.css88.com/doc/chrome-devtools/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2017/01/chrome-32.png" alt=""> Chrome DevTools 中文文档</a></li>
+            <li><a href="http://webpack.css88.com/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2017/02/webpack-s.png" alt=""> webpack 中文文档(v4.15.1)</a></li>
+            <li><a href="http://www.css88.com/doc/lodash/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/lodash-logo.png" alt=""> Lodash中文文档</a></li>
+            <li><a href="http://www.css88.com/doc/sass/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/sass-logo.png" alt=""> Sass中文文档</a></li>
+            <li><a href="http://www.css88.com/tool/css3Preview/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/css3-logo.png" alt=""> CSS3代码生成(演示)</a></li>
+            <li><a href="http://react.css88.com/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2017/05/react-s.png" alt=""> React 中文文档（V16.4.1）</a></li>
+            <li><a href="http://www.css88.com/doc/typescript/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2017/07/tepyscript-s.png" alt=""> TypeScript 中文文档(v2.4)</a></li>
+            <li><a href="http://www.css88.com/jquery-ui-api/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/jquery-ui-logo.png" alt=""> jQuery UI API中文文档</a></li>
+            <li><a href="http://www.css88.com/doc/zeptojs_api/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/zepto-logo.png" alt=""> Zepto.js 中文文档</a></li>
+            <li><a href="http://www.css88.com/dev/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2017/12/cheatsheets-s.png" alt=""> WEB开发速查表</a></li>
+            <li><a href="http://www.css88.com/tool/html2js/" target="_blank">HTML 2 JS 工具</a></li>
+            <li><a href="http://www.css88.com/doc/backbone/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/backbone-logo.png" alt=""> Backbone.js 中文文档</a></li>
+            <li><a href="http://bootstrap.css88.com/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/bootstrap-logo.png" alt=""> Bootstrap 中文文档</a></li>
+            <li><a href="http://www.css88.com/doc/underscore/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/underscore-logo1.png" alt=""> Underscore.js 中文文档</a></li>
+            <li><a href="http://www.css88.com/doc/jsdoc/index.html" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/jsdoc-logo.png" alt=""> JSDoc中文文档</a></li>
+            <li><a href="http://www.css88.com/tool/js_beautify/" target="_blank"><img data-original="http://newimg88.b0.upaiyun.com/newimg88/2016/10/js-logo.png" alt=""> Javascript格式化工具</a></li>
+            <li><a href="http://www.css88.com/tool/csstidy/" target="_blank">CSS整理与优化工具</a></li>
+            <li><a class="last-item" href="http://www.css88.com/nav/" target="_blank"><i class="iconfont"></i> 更多前端文档及工具</a></li>
+        </ul>
+      </div>
+
+    </div>    
+
+    <div class="foot">
+      <p><a href="/">Copyright</a> © 2018 <a href="/">http://www.mrhanjinbao.com, All Rights Reserved 保留所有权利</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

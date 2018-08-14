@@ -1,0 +1,240 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="author" content="mr.han">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="./images/favicon.ico" rel="shortcut icon">
+
+    <title>mr.han空间站</title>
+    <meta name="keywords" content="韩,mr.han,空间站,个人空间,个人网站">
+    <meta name="description" content="个人网站">
+    
+    <link rel="stylesheet" href="css/article.min.css">
+
+    <script src="js/article.min.js"></script>
+
+  </head>
+<body>
+
+ <!-- 导航 -->
+<div class="head-nav">
+  <ul id="nav" class="nav">
+      <li class="nLi">
+          <h3><a href="http://www.mrhanjinbao.com">我的主页</a>
+            <span></span>
+          </h3>
+      </li> 
+      <li class="nLi">
+              <h3><a href="javascript:;" target="_blank">首都旅游</a>
+                <span></span>
+              </h3>
+              <ul class="sub">
+                  <li><a target="_blank" href="/map.html">景点地图</a></li>
+              </ul>
+      </li>
+      <li class="nLi">
+                  <h3><a href="javascript:;" target="_blank">我的相册</a>
+                    <span></span>
+                  </h3>
+                  <ul class="sub">
+                      
+                  </ul>
+      </li>
+      <li class="nLi">
+              <h3><a href="http://pop3.mrhanjinbao.com" target="_blank">我的博客</a>
+                <span></span>
+              </h3>
+      </li>
+      <li class="nLi nLi0">
+              <h3><a href="javascript:;" target="_blank">我的练习</a>
+                <span></span>
+              </h3>
+              <ul class="sub">
+
+              </ul>
+      </li>
+  </ul>
+</div>
+<style type="text/css">
+.head-nav {
+    -moz-box-shadow: 0 1px 2px #ccc;
+    -webkit-box-shadow: 0 1px 2px #ccc;
+    box-shadow: 0 1px 2px #ccc;
+    z-index: 205;
+    position: relative;
+    background: rgb(255,255,255);
+    min-width: 1100px;
+}
+.nav {
+    width: 940px;
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    z-index: 100;
+    font-size: 14px;
+    margin: 0 auto;
+    color: #191919;
+}
+
+.nav .nLi {
+    width: 94px;
+    height: 50px;
+    margin-right: 115px;
+    float: left;
+    position: relative;
+    display: inline;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.nav .nLi0{
+    margin:0;
+}
+
+.nav .nLi li {
+    float: left;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.nav .nLi:hover h3 span {
+    display: block;
+}
+
+.nav .nLi {
+    font-weight: 700;
+}
+
+.nav .nLi h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.nav .nLi h3 a {
+    padding: 0 15px;
+    color: #000;
+    height: 100%;
+    display: block;
+}
+
+.nav .nLi:hover h3 a{
+    color: #ccc;
+}
+
+.nav .nLi h3 span {
+    width: 100%;
+    position: absolute;
+    height: 4px;
+    background: #ccc;
+    bottom: 0px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    display: none;
+}
+
+.sub {
+    display: none;
+    background:rgba(255,255,255,.8);
+    position: absolute;
+    top: 50px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.sub a {
+    color: #fff;
+    display: block;
+    height: 100%;
+}
+
+.sub a:hover {
+    color: #000;
+}
+
+.sub2 {
+    width: 372px;
+}
+
+.sub3 {
+    width: 370px;
+}
+
+.sub4 {
+    display: none;
+    width: 480px;
+    right: 0px;
+    left: inherit;
+    text-align: right;
+}
+ 
+.nav .nLi li.lis3 {
+    width: auto;
+    margin-left: 35px;
+}
+
+.nav .nLi li.lis4 {
+    width: auto;
+    margin-right: 35px;
+}
+</style>
+
+<script type="text/javascript">
+  // 顶部导航
+  $(".nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+</script>
+
+
+
+
+
+
+
+  
+  <div id="site">
+    <div class="art">
+      
+      <h2 v-text="articles.title"></h2>
+      <p>作者：{{articles.author.loginname}}　　发表于：{{articles.create_at}}</p>
+      <hr>
+      <article v-html="articles.content"></article>
+      <h3>网友回复：</h3>
+      <ul>
+        <li v-for="i in articles.replies">
+          <p>评论者：{{i.author.loginname}}　　评论于：{{i.create_at}}</p>
+          <article v-html="i.content"></article>
+        </li>
+      </ul>
+    </div>
+    
+  
+    <div class="foot">
+  <p><a href="/">Copyright</a> © 2018 <a href="/">http://www.mrhanjinbao.com, All Rights Reserved 保留所有权利</a></p>
+</div>
+<style type="text/css">
+.foot{ 
+  background: #333;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+} 
+.foot p{
+  color: #fff;
+}
+.foot a{
+  color: #fff;
+}
+</style>
+
+
+  </div>
+
+</body>
+</html>
