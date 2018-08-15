@@ -1,0 +1,40 @@
+canvas{
+  display: block;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+img{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  min-width: 100%;
+  text-align: center;
+  opacity: .5;
+}
+marquee{
+  position: fixed;
+  top: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+@media (orientation: landscape) { /*横屏*/
+  .info{
+    display: block;
+    font-size: 30px;
+    margin-top: 100px;
+    text-align: center; 
+  }
+  canvas,img{
+    display: none;
+  }
+  marquee{
+    color: #313131;
+  }
+} 
+@media (orientation: portrait) { 
+  .info{
+    display: none;
+  }
+}/*竖屏*/
