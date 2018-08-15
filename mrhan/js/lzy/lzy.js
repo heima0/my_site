@@ -4,24 +4,22 @@ $(function() {
   canvas.height = $(window).height();
   var ctx = canvas.getContext('2d');
 
-  var audio = new Audio();
-  audio.controls = true; //显示
-  audio.autoplay = true; //自动播放
-  audio.loop = true; //设置循环播放
-  audio.src = '../resource/lzy.mp3';
-
-  $(window).load(function() {
-    /* Act on the event */
-    setTimeout(function(){
-      audio.play();
-    },1000)
-  });
-
   $('img').height($(window).height())
 
+  function musics(){
+    var music = document.getElementById("myAudio");
+    music.volume = 0.5;
+    music.play();
+  }
+  $(document).click(function(event) {
+    musics();
+    $('.player-button').addClass('player-button1')
+  });
 
-
-
+  var oAudio = document.getElementById('myAudio');
+  document.addEventListener("WeixinJSBridgeReady", function () {
+      oAudio.play();
+  }, false);
 
 
 
