@@ -2,6 +2,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
   <head>
+    <script type="text/javascript">
+      //判断页面是否是在微信浏览器打开
+      //对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+      var useragent = navigator.userAgent;
+      if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+          window.location.href = "/wxError.html";//若不是微信浏览器，跳转到温馨error页面
+      }
+    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
