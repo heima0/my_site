@@ -19,6 +19,12 @@ marquee{
   color: #fff;
   font-size: 20px;
 }
+marquee span{
+  width: 100px;
+  display: block;
+  text-align: center;
+  
+}
 @media (orientation: landscape) { /*横屏*/
   .info{
     display: block;

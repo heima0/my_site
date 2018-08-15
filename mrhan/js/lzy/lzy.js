@@ -4,10 +4,6 @@ $(function() {
   canvas.height = $(window).height();
   var ctx = canvas.getContext('2d');
 
-  // var audio = document.creatElement("audio");
-  // audio = new Audio('../resource/lzy.mp3');//路径
-  // audio.play();
-
   var audio = new Audio();
   audio.controls = true; //显示
   audio.autoplay = true; //自动播放
