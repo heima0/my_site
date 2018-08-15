@@ -17,6 +17,15 @@ $(function() {
     },1000)
   });
 
+  $('img').height($(window).height())
+
+
+
+
+
+
+
+
   // resize
   $(window).on('resize', function() {
     canvas.width = $(window).width();
