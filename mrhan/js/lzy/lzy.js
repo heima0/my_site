@@ -15,16 +15,17 @@ $(function() {
   function musics(){
     var music = document.getElementById("myAudio");
     music.volume = 0.5;
+    $('.player-button').addClass('player-button1')
     music.play();
   }
   $(document).click(function(event) {
     musics();
-    $('.player-button').addClass('player-button1')
   });
 
   var oAudio = document.getElementById('myAudio');
   document.addEventListener("WeixinJSBridgeReady", function () {
       oAudio.play();
+      $('.player-button').addClass('player-button1')
   }, false);
 
   // resize
