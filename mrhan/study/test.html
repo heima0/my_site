@@ -18,6 +18,10 @@ $('body').click(function(){
   console.log(111)
   document.cookie = 'pc=1;path=/;domain=mrhanjinbao.com';
   console.log(document.cookie);
+  var exp = new Date(); 
+  exp.setTime(exp.getTime() - 1); 
+  document.cookie= "pc=1;path=/;expires="+exp.toGMTString();
+  console.log(document.cookie);
   // window.location.href = 'http://www.visitbeijing.com.cn/';
   return false;
 })
