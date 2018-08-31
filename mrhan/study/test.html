@@ -13,32 +13,20 @@
 alert(document.cookie);
 
 
-
+// cookie设置与删除；
 $('body').click(function(){
   console.log(111)
+  // 设置访问路径，访问域；
   document.cookie = 'pc=1;path=/;domain=mrhanjinbao.com';
   console.log(document.cookie);
   var exp = new Date(); 
   exp.setTime(exp.getTime() - 1); 
+  // 删除时一定要和设置时一样
   document.cookie= "pc=1;path=/;domain=mrhanjinbao.com;expires="+exp.toGMTString();
   console.log(document.cookie);
-  // window.location.href = 'http://www.visitbeijing.com.cn/';
   return false;
 })
 
-
-
-// var date=new Date();
-// var expireDays=10;
-// date.setTime(date.getTime()+expireDays*24*3600*1000);
-// document.cookie="userId=829";
-
-// document.cookie="userName2=hulk2;expires="+date.toGMTString();
-
-// console.log(date.toGMTString())
-// document.cookie = "name=oeschger";
-// document.cookie = "favorite_food=tripe";
-// alert(document.cookie);
 </script>
 </body>
 </html>
