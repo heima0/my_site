@@ -14,10 +14,10 @@
 
 $.ajax({
   url: 'http://api-hq.visitbeijing.com.cn/activity/jqGame/begin',
-  type: 'GET',
-  dataType: 'jsonp',
-  crossDomain: true, 
-  xhrFields: {withCredentials: true},
+  type: 'get',
+  dataType: 'json',
+  // crossDomain: true, 
+  // xhrFields: {withCredentials: true},
   success: function (data,status,res) {
       console.log(data);
   },
@@ -33,8 +33,8 @@ $.ajax({
   url: 'http://api-hq.visitbeijing.com.cn/activity/jqGame/end',
   type: 'POST',
   data: answerArr,
-  crossDomain: true, 
-  xhrFields: {withCredentials: true},
+  // crossDomain: true, 
+  // xhrFields: {withCredentials: true},
   success: function (data) {
     console.log(data)
   },
