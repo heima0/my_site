@@ -4,25 +4,66 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <script type="text/javascript" src="../resource/jq-min.js"></script>
+<script type="text/javascript" src="./md5.js"></script>
 
 </head>
 <body style="height: 500px;" onLoad="">
 
 
 <script type="text/javascript">
-alert(document.cookie);
 
+$.ajax({
+  url: 'http://api-hq.visitbeijing.com.cn/activity/jqGame/begin',
+  type: 'GET',
+  dataType: 'jsonp',
+  crossDomain: true, 
+  xhrFields: {withCredentials: true},
+  success: function (data,status,res) {
+      console.log(data);
+  },
+  complete: function(e){
+    console.log(e.getAllResponseHeaders())
+
+  }
+})
+
+setTimeout(function(){
+var answerArr = [];
+$.ajax({
+  url: 'http://api-hq.visitbeijing.com.cn/activity/jqGame/end',
+  type: 'POST',
+  data: answerArr,
+  crossDomain: true, 
+  xhrFields: {withCredentials: true},
+  success: function (data) {
+    console.log(data)
+  },
+  error: function(e){
+    console.log(e)
+  },
+  complete: function(e){
+    console.log(e.getAllResponseHeaders())
+  }
+})
+
+console.log(document.cookie)
+
+},2000)
+
+
+// alert(document.cookie);
+console.log(md5('201809_JQSP胡锦涛'));
 
 // cookie设置与删除；
 $('body').click(function(){
   console.log(111)
   // 设置访问路径，访问域；
-  document.cookie = 'pc=1;path=/;domain=mrhanjinbao.com';
+  document.cookie = 'pc=1';
   console.log(document.cookie);
   var exp = new Date(); 
-  exp.setTime(exp.getTime() - 1); 
+  // exp.setTime(exp.getTime() - 1); 
   // 删除时一定要和设置时一样
-  document.cookie= "pc=1;path=/;domain=mrhanjinbao.com;expires="+exp.toGMTString();
+  // document.cookie= "pc=1;path=/;domain=mrhanjinbao.com;expires="+exp.toGMTString();
   console.log(document.cookie);
   return false;
 })
