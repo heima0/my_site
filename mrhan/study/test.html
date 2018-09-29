@@ -5,17 +5,43 @@
 <title>无标题文档</title>
 <script type="text/javascript" src="../resource/jq-min.js"></script>
 <script type="text/javascript" src="./md5.js"></script>
-
+<style type="text/css">
+  div.test{
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    height: 100px;
+    background: red;
+  }
+</style>
 </head>
 <body style="height: 500px;" onLoad="">
-
+<div class="test">
+  
+</div>
 
 <script type="text/javascript">
+  $('body').click(function() {
+    $(this).append('<div class="test1">dfdfdfdfd</div>');
+  })
+  // $('div').click(function(){
+  //   console.log(2222222)
+  //   console.log($(this))
+  // })
+  $('body').on('click', '.test1', function(e){
+
+    console.log(2222222)
+    e.stopPropagation();
+    return false;
+
+  })
+  
 
 $.ajax({
   url: 'http://api-hq.visitbeijing.com.cn/activity/jqGame/begin',
   type: 'get',
-  dataType: 'jsonp',
+  dataType: 'json',
   crossDomain: true, 
   xhrFields: {withCredentials: true},
   success: function (data,status,res) {
@@ -71,3 +97,16 @@ $('body').click(function(){
 </script>
 </body>
 </html>
+<script>
+(function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.charset="utf-8";g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","//assets-cli.udesk.cn/im_client/js/udeskApi.js","ud");
+ud({
+    "code": "2j4a14cg",
+    "link": "//17346508550.udesk.cn/im_client/?web_plugin_id=56445"
+});
+</script>
+
+
+
+
+
+
